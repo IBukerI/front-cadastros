@@ -1,0 +1,27 @@
+// app.component.scss
+
+.example-toolbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.sidenav-container {
+  padding-top: 64px; // Ajuste conforme a altura da toolbar
+}
+
+.container {
+  padding: 20px;
+}
+
+.menu-button {
+  color: #483285;
+  font-size: 16px;
+  /* Adicione mais propriedades conforme necessário */
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+}

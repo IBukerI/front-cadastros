@@ -1,0 +1,23 @@
+<div class="login-background">
+  <div class="container">
+    <div class="row justify-content-center align-items-center vh-100">
+      <div class="col-md-6">
+        <h2>Login</h2>
+        <form (ngSubmit)="login()">
+          <div class="form-group">
+            <label for="username">E-mail</label>
+            <input type="text" id="username" class="form-control" [(ngModel)]="email" name="email" placeholder="E-mail" [ngClass]="{'is-invalid': emailError}">
+            <div *ngIf="emailError" class="invalid-feedback">{{ emailError }}</div>
+          </div>
+          <div class="form-group">
+            <label for="password">Senha</label>
+            <input type="password" id="password" class="form-control" [(ngModel)]="password" name="password" placeholder="Senha" [ngClass]="{'is-invalid': passwordError}">
+            <div *ngIf="passwordError" class="invalid-feedback d-block">{{ passwordError }}</div>
+          </div>
+          <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
+          <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,55 @@
+<mat-toolbar color="primary" class="example-toolbar toolbar">
+  <div>
+    <button mat-button routerLink="/">
+      <i class="material-icons">home</i>Home
+    </button>
+    <button mat-button routerLink="/">
+      <i class="material-icons">dashboard</i>Dashboard
+    </button>
+    <button mat-button routerLink="/cadastro-cliente">
+      <i class="material-icons">people</i>Clientes
+    </button>
+    <button mat-button [matMenuTriggerFor]="menuFrota">
+      <i class="material-icons">directions_car</i>Frota
+    </button>
+    <mat-menu #menuFrota="matMenu">
+      <button mat-menu-item class="menu-button" routerLink="">
+        <i class="material-icons">add</i>Cadastrar Veículo
+      </button>
+      <button mat-menu-item class="menu-button" routerLink="">
+        <i class="material-icons">search</i>Consultar Veículo
+      </button>
+      <button mat-menu-item class="menu-button" routerLink="">
+        <i class="material-icons">car_repair</i>Ordens de Manutenção
+      </button>
+    </mat-menu>
+    <button mat-button [matMenuTriggerFor]="menuLocacao">
+      <i class="material-icons">car_rental</i>Locação
+    </button>
+    <mat-menu #menuLocacao="matMenu">
+      <button mat-menu-item class="menu-button" routerLink="">
+        <i class="material-icons">add</i>Nova Locação
+      </button>
+      <button mat-menu-item class="menu-button" routerLink="">
+        <i class="material-icons">search</i>Consultar Locação
+      </button>
+    </mat-menu>
+    <button mat-button routerLink="/category" class="menu-item">
+      <i class="material-icons">calendar_month</i>Calendário
+    </button>
+  </div>
+  <div>
+    <button mat-button routerLink="/category">
+      <i class="material-icons">settings</i>Configuração
+    </button>
+    <button mat-button routerLink="/logout">
+      <i class="material-icons">logout</i>Logout
+    </button>
+  </div>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav-content class="sidenav-container">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
